@@ -1,0 +1,232 @@
+// Définition de nos constantes de style
+$main-green: rgb(101, 125, 111);
+$main-yellow: rgb(225, 219, 73);
+$transparent-yellow: rgba(225, 219, 73, 0.7);
+$burger-menu-hr-color: rgb(199, 184, 69);
+$burger-menu-shadow-color: rgba(66, 66, 66, 0.6);
+$grey: rgb(33, 33, 33);
+$header-height: 60px;
+$stats-bg-color: rgba(101, 125, 111, 0.08);
+
+// Charger la police Neue Haas Unica
+@font-face {
+    font-family: 'Neue';
+    src: url("assets/fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Neue bold';
+    src: url("assets/fonts/NeueHaasUnica-Bold.ttf") format("truetype");
+}
+
+
+// Animations
+@keyframes burger-slices-color-animation {
+    from {background-color: $grey;}
+    to {background-color: white;}
+}
+
+@keyframes burger-slices-color-return-animation {
+    from {background-color: white;}
+    to {background-color: $grey;}
+}
+
+
+
+body {
+
+    * {
+        text-decoration: none;
+    }
+
+    font-family: 'Neue';
+    margin: 0px;
+
+    header {
+
+        .header-top {
+            background-color: $main-green;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 15px;
+            height: $header-height;
+
+            .branding > h1 {
+                font-size: 1.4rem;
+                justify-content: flex-start;
+            }
+
+            .burger-menu > .burger-slice {
+                width: 35px;
+                height: 3px;
+                background-color: $grey;
+                margin: 6px 0px;
+                border-radius: 3px;
+            }
+
+            #slice1, #slice2, #slice3 {
+                animation: burger-slices-color-return-animation 0.6s ease;
+                background-color: $grey;
+            }
+
+            .burger-menu:hover {
+
+                #slice1 {
+                    transform: rotate(-45deg) translate(-9px, 7px);
+                }
+
+                #slice2 {
+                    opacity: 0;
+                }
+
+                #slice3 {
+                    transform: rotate(45deg) translate(-6px, -4px);
+                }
+
+                #slice1, #slice2, #slice3 {
+                    animation: burger-slices-color-animation 0.6s ease;
+                    background-color: white;
+                }
+            }
+        }
+
+        .menu-burger-activated {
+
+            display: flex;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            
+            background-color: white;
+            box-shadow: 2px 3px 10px $burger-menu-shadow-color;
+
+            nav {
+
+                ul {
+
+                    li {
+                        list-style: none;
+                    }
+
+                    hr {
+                        border: 0.2px $burger-menu-hr-color solid;
+                        width: 66vw;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+
+        .hero-banner {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 66vh;
+                object-fit: cover;
+                max-width: 100vw;
+            }
+
+            h2 {
+                font-size: 2rem;
+                position: absolute;
+                color: $main-green;
+                padding: 9% 5%;
+                text-justify: distribute;
+                text-shadow: 2px 4px 5px rgb(143, 139, 139);
+            }
+
+            .plant-tree-btn {
+                font-size: 1.2rem;
+                position: absolute;
+                margin: 66% 30%;
+                background-color: rgba(255, 255, 255, 0);
+                border: 2px white solid;
+                border-radius: 20px;
+                width: 55%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        .grid-area {
+            display: flex;
+            justify-content: center;
+            
+            .about-us {
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+                .about-block {
+                    background-color: lightblue;
+                    width: 40vw;
+                    height: 64vw;
+                }
+            }
+        }
+
+        .stats {
+            background-color: $stats-bg-color;
+            padding: 15px 0px;
+
+            .trees-oxygen, .animals, .donate-argued {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 30px;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    p {
+                        padding: 0px;
+                        margin: 0px;
+                    }
+
+                    .green-number {
+                        color: $main-green;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+
+                    .subject {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .donate-argued {
+                background-color: $main-green;
+                border-radius: 20px;
+                font-weight: 500;
+                margin-inline: 10%;
+                display: flex;
+                align-items: baseline;
+                margin-bottom: 20px;
+
+                a {
+                    color: white;
+                }
+            }
+
+            .donate-argued:hover {
+                background-color: rgb(120, 145, 131);
+            }
+        }
+    }
+}
