@@ -191,7 +191,7 @@ body main .grid-area {
 }
 
 body main .grid-area .about-us {
-  margin-top: 30px;
+  margin: 30px 0px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -200,9 +200,47 @@ body main .grid-area .about-us {
 }
 
 body main .grid-area .about-us .about-block {
-  background-color: lightblue;
+  background: -webkit-gradient(linear, left top, left bottom, from(#266e86), to(#657d6f));
+  background: linear-gradient(#266e86, #657d6f);
   width: 40vw;
   height: 64vw;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.385);
+          box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.385);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .grid-area .about-us .about-block h3 {
+  color: white;
+}
+
+body main .grid-area .about-us .about-block .learn-more {
+  border: 3px white solid;
+  border-radius: 15px 0px 15px 0px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .grid-area .about-us .about-block .learn-more a {
+  color: white;
+  font-size: 0.8rem;
 }
 
 body main .stats {
@@ -251,6 +289,10 @@ body main .stats .trees-oxygen div .subject, body main .stats .animals div .subj
   font-size: 1rem;
 }
 
+body main .stats .animals {
+  margin-top: 10vh;
+}
+
 body main .stats .donate-argued {
   background-color: #657d6f;
   border-radius: 20px;
@@ -262,7 +304,11 @@ body main .stats .donate-argued {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  margin-bottom: 20px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  height: 5vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 body main .stats .donate-argued a {
@@ -271,5 +317,45 @@ body main .stats .donate-argued a {
 
 body main .stats .donate-argued:hover {
   background-color: #789183;
+}
+
+body main .participants .participants-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .participants .participants-title h3 {
+  color: #657d6f;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+body main .participants .participants-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0px;
+}
+
+body main .participants .participants-list ul li {
+  list-style: none;
+  color: #266e86;
+  font-style: italic;
+}
+
+body main .participants .participants-list ul #trump {
+  -webkit-text-decoration: line-through #266e86 solid;
+          text-decoration: line-through #266e86 solid;
 }
 /*# sourceMappingURL=style.css.map */

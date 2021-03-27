@@ -7,6 +7,7 @@ $burger-menu-shadow-color: rgba(66, 66, 66, 0.6);
 $grey: rgb(33, 33, 33);
 $header-height: 60px;
 $stats-bg-color: rgba(101, 125, 111, 0.08);
+$main-blue: rgb(38, 110, 134);
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -165,15 +166,39 @@ body {
             justify-content: center;
             
             .about-us {
-                margin-top: 30px;
+                margin: 30px 0px;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
 
                 .about-block {
-                    background-color: lightblue;
+                    background: linear-gradient($main-blue, $main-green);
                     width: 40vw;
                     height: 64vw;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.385);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3 {
+                        color: white;
+                    }
+
+                    .learn-more {
+                        border: 3px white solid;
+                        border-radius: 15px 0px 15px 0px;
+                        width: 75%;
+                        display: flex;
+                        justify-content: center;
+
+                        a {
+                            color: white;
+                            font-size: 0.8rem;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -210,6 +235,10 @@ body {
                 }
             }
 
+            .animals {
+                margin-top: 10vh;
+            }
+
             .donate-argued {
                 background-color: $main-green;
                 border-radius: 20px;
@@ -217,7 +246,10 @@ body {
                 margin-inline: 10%;
                 display: flex;
                 align-items: baseline;
-                margin-bottom: 20px;
+                margin-top: 10vh;
+                margin-bottom: 5vh;
+                height: 5vh;
+                align-content: center;
 
                 a {
                     color: white;
@@ -226,6 +258,41 @@ body {
 
             .donate-argued:hover {
                 background-color: rgb(120, 145, 131);
+            }
+        }
+
+        .participants {
+
+            .participants-title {
+                display: flex;
+                justify-content: center;
+
+                h3 {
+                    color: $main-green;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+                
+            }
+
+            .participants-list {
+                
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-left: 0px;
+
+                    li {
+                        list-style: none;
+                        color: $main-blue;
+                        font-style: italic;
+                    }
+
+                    #trump {
+                        text-decoration: line-through $main-blue solid;
+                    }
+                }
             }
         }
     }
