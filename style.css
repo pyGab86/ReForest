@@ -155,7 +155,7 @@ body main .hero-banner h2 {
   color: #657d6f;
   padding: 9% 5%;
   text-justify: distribute;
-  text-shadow: 2px 4px 5px #8f8b8b;
+  text-shadow: 2px 4px 10px rgba(143, 139, 139, 0.5);
 }
 
 body main .hero-banner .plant-tree-btn {
