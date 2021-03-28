@@ -12,7 +12,7 @@ burger.hover(() => {
 
     } else {
         // On ajoute le menu au DOM si le menu est ouvert
-        header.append("<div class='menu-burger-activated'><nav><ul><li>Adhérer</li><hr/><li>Mon Compte</li><hr/><li>Calculer mon empreinte</li><hr/><li>Nous contacter</li><hr/><li>Soutenir la planète</li></ul></nav></div>");
+        header.append("<div class='menu-burger-activated'><nav><ul><li>Devenir Membre</li><hr/><li>Mon Compte</li><hr/><li>Calculer mon empreinte</li><hr/><li>Nous contacter</li><hr/><li>Soutenir la planète</li></ul></nav></div>");
         menuShown = true;
     }
 })

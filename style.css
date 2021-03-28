@@ -127,7 +127,7 @@ body header .menu-burger-activated nav ul li {
 }
 
 body header .menu-burger-activated nav ul hr {
-  border: 0.2px #c7b845 solid;
+  border: 1px #266e86 solid;
   width: 66vw;
 }
 
@@ -319,6 +319,10 @@ body main .stats .donate-argued:hover {
   background-color: #789183;
 }
 
+body main .participants {
+  margin-bottom: 30px;
+}
+
 body main .participants .participants-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,6 +336,7 @@ body main .participants .participants-title h3 {
   color: #657d6f;
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 20px;
 }
 
 body main .participants .participants-list ul {
@@ -346,6 +351,7 @@ body main .participants .participants-list ul {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 0px;
+  margin-bottom: 50px;
 }
 
 body main .participants .participants-list ul li {
@@ -357,5 +363,29 @@ body main .participants .participants-list ul li {
 body main .participants .participants-list ul #trump {
   -webkit-text-decoration: line-through #266e86 solid;
           text-decoration: line-through #266e86 solid;
+}
+
+body footer .footer-container {
+  background: #657d6f;
+  color: #3d5547;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px;
+}
+
+body footer .footer-container a {
+  color: #3d5547;
+}
+
+body footer .footer-container a:hover {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
