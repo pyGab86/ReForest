@@ -388,4 +388,20 @@ body footer .footer-container a {
 body footer .footer-container a:hover {
   color: white;
 }
+
+body footer .footer-container #contact::before {
+  content: url(assets/phone.svg);
+}
+
+body footer .footer-container #careers::before {
+  content: url(assets/briefcase.svg);
+}
+
+body footer .footer-container #become-member::before {
+  content: url(assets/smile.svg);
+}
+
+body footer .footer-container #website-conditions::before {
+  content: url(assets/document.svg);
+}
 /*# sourceMappingURL=style.css.map */

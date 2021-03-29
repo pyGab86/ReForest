@@ -318,6 +318,23 @@ body {
             a:hover {
                 color: white;
             }
+
+            #contact::before {
+                content: url(assets/phone.svg);
+            }
+
+            #careers::before {
+                content: url(assets/briefcase.svg);
+            }
+
+            #become-member::before {
+                content: url(assets/smile.svg);
+            }
+
+            #website-conditions::before {
+                content: url(assets/document.svg);
+            }
+
         }
     }
 }
