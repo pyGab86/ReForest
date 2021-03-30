@@ -21,6 +21,17 @@ $footer-font-color: rgb(61, 85, 71);
     src: url("assets/fonts/NeueHaasUnica-Bold.ttf") format("truetype");
 }
 
+// Animations
+@keyframes burger-slices-color-animation {
+    from {background-color: $grey;}
+    to {background-color: white;}
+}
+
+@keyframes burger-slices-color-return-animation {
+    from {background-color: white;}
+    to {background-color: $grey;}
+}
+
 body {
     
     * {
@@ -108,29 +119,115 @@ body {
     }
 
     main {
+        background: linear-gradient(white, $main-green);
+        padding-bottom: 30px;
 
-        .action-show-off {
+        .page-title {
             display: flex;
-            max-width: 85vw;
-            margin: 30px;
-            border: 3px $main-green solid;
+            justify-content: center;
+
+            h1 {
+                color: $main-green;
+                padding: 0px;
+                margin: 10px 0px;
+                margin-top: 20px;
+                font-size: 1.66rem;
+            }
+        }
+
+        .action-show-off-wrapper {
+            margin: 27px;
             border-radius: 5px;
+            padding: 5px 5px;
             box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
 
-            img {
-                object-fit: cover;
-                max-width: 50%;
-            }
+            .action-show-off {
+                border: 0px;
+                margin: 0px;
+                display: flex;
 
-            .paragraph {
-                padding: 0 10px;
-                text-justify: distribute-all-lines;
+                img {
+                    object-fit: cover;
+                    max-width: 50%;
+                    border-radius: 5px 0px 0px 5px;
+                }
 
-                p {
-                    text-justify: auto;
+                .paragraph {
+                    background-color: white;
+                    border-radius: 0px 5px 5px 0px;
+
+                    p {
+                        padding: 0px 2vw;
+                        color: $main-green;
+                    }
                 }
             }
         }
+
+        #first {
+            background: linear-gradient(0.45turn, $main-green, rgb(170, 170, 170));
+        }
+
+        #second {
+            background: linear-gradient(0.45turn, rgb(170, 170, 170), rgb(210, 210, 210));
+
+            .action-show-off {
+                flex-direction: row-reverse;
+            }
+        }
+
+        #third {
+            background: linear-gradient(0.45turn, rgb(210, 210, 210), white);
+        }
     }
 
+    footer {
+        background: $main-green;
+        color: $footer-font-color;
+
+        #hr-top {
+            border: 2px $footer-font-color dotted;
+            margin: 0px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+
+            h5 {
+                margin: 20px;
+            }
+        }
+
+        .footer-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            padding-bottom: 30px;
+
+            .left-group, .right-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            a {
+                color: $footer-font-color;
+            }
+
+            a:hover {
+                color: white;
+            }
+        }
+
+        hr {
+            border: 1px $footer-font-color solid;
+        }
+
+        .social-networks {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3px;
+        }
+    }
 }

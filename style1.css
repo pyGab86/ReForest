@@ -8,6 +8,42 @@
   src: url("assets/fonts/NeueHaasUnica-Bold.ttf") format("truetype");
 }
 
+@-webkit-keyframes burger-slices-color-animation {
+  from {
+    background-color: #212121;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes burger-slices-color-animation {
+  from {
+    background-color: #212121;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@-webkit-keyframes burger-slices-color-return-animation {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #212121;
+  }
+}
+
+@keyframes burger-slices-color-return-animation {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #212121;
+  }
+}
+
 body {
   font-family: 'Neue';
   margin: 0px;
@@ -95,30 +131,147 @@ body header .menu-burger-activated nav ul hr {
   width: 66vw;
 }
 
-body main .action-show-off {
+body main {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#657d6f));
+  background: linear-gradient(white, #657d6f);
+  padding-bottom: 30px;
+}
+
+body main .page-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 85vw;
-  margin: 30px;
-  border: 3px #657d6f solid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .page-title h1 {
+  color: #657d6f;
+  padding: 0px;
+  margin: 10px 0px;
+  margin-top: 20px;
+  font-size: 1.66rem;
+}
+
+body main .action-show-off-wrapper {
+  margin: 27px;
   border-radius: 5px;
+  padding: 5px 5px;
   -webkit-box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
           box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
 }
 
-body main .action-show-off img {
+body main .action-show-off-wrapper .action-show-off {
+  border: 0px;
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .action-show-off-wrapper .action-show-off img {
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 50%;
+  border-radius: 5px 0px 0px 5px;
 }
 
-body main .action-show-off .paragraph {
-  padding: 0 10px;
-  text-justify: distribute-all-lines;
+body main .action-show-off-wrapper .action-show-off .paragraph {
+  background-color: white;
+  border-radius: 0px 5px 5px 0px;
 }
 
-body main .action-show-off .paragraph p {
-  text-justify: auto;
+body main .action-show-off-wrapper .action-show-off .paragraph p {
+  padding: 0px 2vw;
+  color: #657d6f;
+}
+
+body main #first {
+  background: linear-gradient(0.45turn, #657d6f, #aaaaaa);
+}
+
+body main #second {
+  background: linear-gradient(0.45turn, #aaaaaa, #d2d2d2);
+}
+
+body main #second .action-show-off {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body main #third {
+  background: linear-gradient(0.45turn, #d2d2d2, white);
+}
+
+body footer {
+  background: #657d6f;
+  color: #3d5547;
+}
+
+body footer #hr-top {
+  border: 2px #3d5547 dotted;
+  margin: 0px;
+}
+
+body footer .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+}
+
+body footer .title h5 {
+  margin: 20px;
+}
+
+body footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 30px;
+}
+
+body footer .footer-container .left-group, body footer .footer-container .right-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body footer .footer-container a {
+  color: #3d5547;
+}
+
+body footer .footer-container a:hover {
+  color: white;
+}
+
+body footer hr {
+  border: 1px #3d5547 solid;
+}
+
+body footer .social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3px;
 }
 /*# sourceMappingURL=style1.css.map */
