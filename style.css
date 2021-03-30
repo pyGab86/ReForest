@@ -290,7 +290,7 @@ body main .stats .trees-oxygen div .subject, body main .stats .animals div .subj
 }
 
 body main .stats .animals {
-  margin-top: 10vh;
+  margin-top: 6vh;
 }
 
 body main .stats .donate-argued {
@@ -298,17 +298,12 @@ body main .stats .donate-argued {
   border-radius: 20px;
   font-weight: 500;
   margin-inline: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 5vh;
-  height: 5vh;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  height: 6vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main .stats .donate-argued a {
@@ -360,14 +355,56 @@ body main .participants .participants-list ul li {
   font-style: italic;
 }
 
+body main .participants .participants-list ul li::before {
+  content: "~ ";
+}
+
+body main .participants .participants-list ul li::after {
+  content: " ~";
+}
+
 body main .participants .participants-list ul #trump {
   -webkit-text-decoration: line-through #266e86 solid;
           text-decoration: line-through #266e86 solid;
 }
 
-body footer .footer-container {
+body main .participants .participants-list ul #trump::before, body main .participants .participants-list ul #trump::after {
+  content: "";
+}
+
+body footer {
   background: #657d6f;
   color: #3d5547;
+}
+
+body footer .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+}
+
+body footer .title h5 {
+  margin: 20px;
+}
+
+body footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-bottom: 30px;
+}
+
+body footer .footer-container .left-group, body footer .footer-container .right-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,10 +412,6 @@ body footer .footer-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 30px;
 }
 
 body footer .footer-container a {
@@ -389,19 +422,17 @@ body footer .footer-container a:hover {
   color: white;
 }
 
-body footer .footer-container #contact::before {
-  content: url(assets/phone.svg);
+body footer hr {
+  border: 1px #3d5547 solid;
 }
 
-body footer .footer-container #careers::before {
-  content: url(assets/briefcase.svg);
-}
-
-body footer .footer-container #become-member::before {
-  content: url(assets/smile.svg);
-}
-
-body footer .footer-container #website-conditions::before {
-  content: url(assets/document.svg);
+body footer .social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3px;
 }
 /*# sourceMappingURL=style.css.map */

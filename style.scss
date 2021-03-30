@@ -237,7 +237,7 @@ body {
             }
 
             .animals {
-                margin-top: 10vh;
+                margin-top: 6vh;
             }
 
             .donate-argued {
@@ -245,12 +245,10 @@ body {
                 border-radius: 20px;
                 font-weight: 500;
                 margin-inline: 10%;
-                display: flex;
-                align-items: baseline;
-                margin-top: 10vh;
+                margin-top: 5vh;
                 margin-bottom: 5vh;
-                height: 5vh;
-                align-content: center;
+                height: 6vh;
+                align-items: center;
 
                 a {
                     color: white;
@@ -293,8 +291,20 @@ body {
                         font-style: italic;
                     }
 
+                    li::before {
+                        content: "~ ";
+                    }
+
+                    li::after {
+                        content: " ~";
+                    }
+
                     #trump {
                         text-decoration: line-through $main-blue solid;
+                    }
+
+                    #trump::before, #trump::after {
+                        content: "";
                     }
                 }
             }
@@ -302,14 +312,29 @@ body {
     }
 
     footer {
+        background: $main-green;
+        color: $footer-font-color;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+
+            h5 {
+                margin: 20px;
+            }
+        }
 
         .footer-container {
-            background: $main-green;
-            color: $footer-font-color;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            justify-content: space-evenly;
             padding-bottom: 30px;
+
+            .left-group, .right-group {
+                display: flex;
+                flex-direction: column;
+            }
 
             a {
                 color: $footer-font-color;
@@ -318,23 +343,16 @@ body {
             a:hover {
                 color: white;
             }
+        }
 
-            #contact::before {
-                content: url(assets/phone.svg);
-            }
+        hr {
+            border: 1px $footer-font-color solid;
+        }
 
-            #careers::before {
-                content: url(assets/briefcase.svg);
-            }
-
-            #become-member::before {
-                content: url(assets/smile.svg);
-            }
-
-            #website-conditions::before {
-                content: url(assets/document.svg);
-            }
-
+        .social-networks {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3px;
         }
     }
 }
