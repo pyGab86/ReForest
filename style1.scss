@@ -160,6 +160,11 @@ body {
                         padding: 0px 2vw;
                         color: $main-green;
                     }
+
+                    h2 {
+                        color: $main-green;
+                        margin: 1vw 2vw;
+                    }
                 }
             }
         }
@@ -173,6 +178,14 @@ body {
 
             .action-show-off {
                 flex-direction: row-reverse;
+
+                img {
+                    border-radius: 0px 5px 5px 0px;
+                }
+
+                .paragraph {
+                    border-radius: 5px 0px 0px 5px;
+                }
             }
         }
 

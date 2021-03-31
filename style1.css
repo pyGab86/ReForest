@@ -187,6 +187,11 @@ body main .action-show-off-wrapper .action-show-off .paragraph p {
   color: #657d6f;
 }
 
+body main .action-show-off-wrapper .action-show-off .paragraph h2 {
+  color: #657d6f;
+  margin: 1vw 2vw;
+}
+
 body main #first {
   background: linear-gradient(0.45turn, #657d6f, #aaaaaa);
 }
@@ -200,6 +205,14 @@ body main #second .action-show-off {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+body main #second .action-show-off img {
+  border-radius: 0px 5px 5px 0px;
+}
+
+body main #second .action-show-off .paragraph {
+  border-radius: 5px 0px 0px 5px;
 }
 
 body main #third {
