@@ -1,0 +1,240 @@
+// Définition de nos constantes de style
+$main-green: rgb(101, 125, 111);
+$main-yellow: rgb(225, 219, 73);
+$transparent-yellow: rgba(225, 219, 73, 0.7);
+$burger-menu-hr-color: rgb(199, 184, 69);
+$burger-menu-shadow-color: rgba(66, 66, 66, 0.6);
+$grey: rgb(33, 33, 33);
+$header-height: 60px;
+$stats-bg-color: rgba(101, 125, 111, 0.08);
+$main-blue: rgb(38, 110, 134);
+$footer-font-color: rgb(61, 85, 71);
+
+// Charger la police Neue Haas Unica
+@font-face {
+    font-family: 'Neue';
+    src: url("assets/fonts/NeueHaasUnica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Neue bold';
+    src: url("assets/fonts/NeueHaasUnica-Bold.ttf") format("truetype");
+}
+
+// Animations
+@keyframes burger-slices-color-animation {
+    from {background-color: $grey;}
+    to {background-color: white;}
+}
+
+@keyframes burger-slices-color-return-animation {
+    from {background-color: white;}
+    to {background-color: $grey;}
+}
+
+body {
+    
+    * {
+        text-decoration: none;
+    }
+
+    font-family: 'Neue';
+    margin: 0px;
+
+    header {
+
+        .header-top {
+            background-color: $main-green;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 15px;
+            height: $header-height;
+
+            .branding > h1 {
+                font-size: 1.4rem;
+                justify-content: flex-start;
+            }
+
+            .burger-menu > .burger-slice {
+                width: 35px;
+                height: 3px;
+                background-color: $grey;
+                margin: 6px 0px;
+                border-radius: 3px;
+            }
+
+            #slice1, #slice2, #slice3 {
+                animation: burger-slices-color-return-animation 0.6s ease;
+                background-color: $grey;
+            }
+
+            .burger-menu:hover {
+
+                #slice1 {
+                    transform: rotate(-45deg) translate(-9px, 7px);
+                }
+
+                #slice2 {
+                    opacity: 0;
+                }
+
+                #slice3 {
+                    transform: rotate(45deg) translate(-6px, -4px);
+                }
+
+                #slice1, #slice2, #slice3 {
+                    animation: burger-slices-color-animation 0.6s ease;
+                    background-color: white;
+                }
+            }
+        }
+
+        .menu-burger-activated {
+
+            display: flex;
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            
+            background-color: white;
+            box-shadow: 2px 3px 10px $burger-menu-shadow-color;
+
+            nav {
+
+                ul {
+
+                    li {
+                        list-style: none;
+                    }
+
+                    hr {
+                        border: 1px $main-blue solid;
+                        width: 66vw;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        padding: 0 5vw;
+
+        section {
+
+            .events-grid {
+
+                @media screen and (min-width: 992px) {
+                    background-color: red;
+                }
+
+                .event {
+                    border: 5px black solid;
+                    border-radius: 5px;
+                    margin: 5vw 0;
+                    background-color: rgb(230, 230, 230);
+
+                    h3 {
+                        font-size: 1.3rem;
+                    }
+
+                    * {
+                        padding: 3vw 3vw;
+                    }
+
+                    p {
+                        text-align: justify;
+                    }
+
+                    #location::before {
+                        content: "\1F5F8     ";
+                    }
+
+                    .support-us-btns {
+                        display: flex;
+                        justify-content: space-between;
+
+                        #subscribe {
+                            background-color: black;
+                        }
+
+                        #donate {
+                            background-color: $main-green;
+                        }
+
+                        #donate, #subscribe {
+                            color: white;
+                            border: none;
+                            border-radius: 3px;
+                            margin-bottom: 6vw;
+                        }
+
+                    }
+
+                    .infos {
+
+                        p {
+                            padding: 0px;
+                            margin: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+        aside {
+
+        }
+    }
+
+    footer {
+        background: $main-green;
+        color: $footer-font-color;
+
+        #hr-top {
+            border: 2px $footer-font-color dotted;
+            margin: 0px;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+
+            h5 {
+                margin: 20px;
+            }
+        }
+
+        .footer-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            padding-bottom: 30px;
+
+            .left-group, .right-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            a {
+                color: $footer-font-color;
+            }
+
+            a:hover {
+                color: white;
+            }
+        }
+
+        hr {
+            border: 1px $footer-font-color solid;
+        }
+
+        .social-networks {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3px;
+        }
+    }
+}
