@@ -135,67 +135,161 @@ body main {
   padding: 0 5vw;
 }
 
-@media screen and (min-width: 992px) {
-  body main section .events-grid {
-    background-color: red;
-  }
+body main .events-text h2 {
+  color: #657d6f;
 }
 
-body main section .events-grid .event {
-  border: 5px black solid;
-  border-radius: 5px;
-  margin: 5vw 0;
-  background-color: #e6e6e6;
-}
-
-body main section .events-grid .event h3 {
-  font-size: 1.3rem;
-}
-
-body main section .events-grid .event * {
-  padding: 3vw 3vw;
-}
-
-body main section .events-grid .event p {
+body main .events-text p {
   text-align: justify;
 }
 
-body main section .events-grid .event #location::before {
-  content: "\1F5F8     ";
+body main .events-text hr {
+  margin-bottom: 40px;
 }
 
-body main section .events-grid .event .support-us-btns {
+body main .main-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-body main section .events-grid .event .support-us-btns #subscribe {
+@media screen and (min-width: 300px) {
+  body main .main-layout section .events-list .events-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    grid-gap: 10px;
+    width: 66vw;
+  }
+}
+
+body main .main-layout section .events-list .events-grid .event {
+  border: 5px black solid;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  margin-bottom: 10px;
+}
+
+body main .main-layout section .events-list .events-grid .event h3 {
+  font-size: 1.3rem;
+}
+
+body main .main-layout section .events-list .events-grid .event * {
+  padding: 20px;
+}
+
+body main .main-layout section .events-list .events-grid .event p {
+  text-align: justify;
+}
+
+body main .main-layout section .events-list .events-grid .event #location::before {
+  content: "\1F5F8     ";
+}
+
+body main .main-layout section .events-list .events-grid .event .support-us-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .main-layout section .events-list .events-grid .event .support-us-btns #subscribe {
   background-color: black;
 }
 
-body main section .events-grid .event .support-us-btns #donate {
+body main .main-layout section .events-list .events-grid .event .support-us-btns #donate {
   background-color: #657d6f;
 }
 
-body main section .events-grid .event .support-us-btns #donate, body main section .events-grid .event .support-us-btns #subscribe {
+body main .main-layout section .events-list .events-grid .event .support-us-btns #donate, body main .main-layout section .events-list .events-grid .event .support-us-btns #subscribe {
   color: white;
   border: none;
   border-radius: 3px;
-  margin-bottom: 6vw;
+  margin-bottom: 5px;
+  padding: 10px;
 }
 
-body main section .events-grid .event .infos p {
+body main .main-layout section .events-list .events-grid .event .infos p {
   padding: 0px;
   margin: 0px;
+}
+
+body main .main-layout aside {
+  display: none;
+}
+
+@media screen and (min-width: 300px) {
+  body main .main-layout aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: 30px;
+  }
+  body main .main-layout aside section {
+    margin-top: 0px;
+  }
+  body main .main-layout aside section h4 {
+    margin-top: -5px;
+    text-align: center;
+  }
+  body main .main-layout aside section .green-peace-wrapper {
+    background: linear-gradient(0.45deg, #1e5aff, #e12f5f, #e12fe1, #cdd026);
+    border-radius: 10px;
+    width: 100%;
+  }
+  body main .main-layout aside section .green-peace-wrapper .green-peace {
+    color: white;
+    background-color: black;
+    border: 1px #e12f5f solid;
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+  }
+  body main .main-layout aside section .green-peace-wrapper .green-peace h5, body main .main-layout aside section .green-peace-wrapper .green-peace p {
+    text-align: center;
+  }
+  body main .main-layout aside section .green-peace-wrapper .green-peace h5 {
+    font-size: 1rem;
+  }
+  body main .main-layout aside section .green-peace-wrapper .green-peace .link-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  body main .main-layout aside section .green-peace-wrapper .green-peace .link-wrapper a {
+    color: black;
+    margin: auto 5px;
+  }
 }
 
 body footer {
   background: #657d6f;
   color: #3d5547;
+  margin-top: 50px;
 }
 
 body footer #hr-top {

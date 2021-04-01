@@ -9,6 +9,12 @@ $header-height: 60px;
 $stats-bg-color: rgba(101, 125, 111, 0.08);
 $main-blue: rgb(38, 110, 134);
 $footer-font-color: rgb(61, 85, 71);
+$green-peace-bg-1: rgb(30, 90, 255);
+$green-peace-bg-2: rgb(225, 47, 95);
+$green-peace-bg-3: rgb(225, 47, 225);
+$green-peace-bg-4: rgb(205, 208, 38);
+
+$aside-show-media: 300px;
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -121,76 +127,155 @@ body {
     main {
         padding: 0 5vw;
 
-        section {
+        .events-text {
+            h2 {
+                color: $main-green;
+            }
 
-            .events-grid {
+            p {
+                text-align: justify;
+            }
 
-                @media screen and (min-width: 992px) {
-                    background-color: red;
-                }
+            hr {
+                margin-bottom: 40px;
+            }
+        }
 
-                .event {
-                    border: 5px black solid;
-                    border-radius: 5px;
-                    margin: 5vw 0;
-                    background-color: rgb(230, 230, 230);
+        .main-layout {
+            display: flex;
 
-                    h3 {
-                        font-size: 1.3rem;
-                    }
+            section {
 
-                    * {
-                        padding: 3vw 3vw;
-                    }
+                .events-list {
 
-                    p {
-                        text-align: justify;
-                    }
+                    .events-grid {
 
-                    #location::before {
-                        content: "\1F5F8     ";
-                    }
-
-                    .support-us-btns {
-                        display: flex;
-                        justify-content: space-between;
-
-                        #subscribe {
-                            background-color: black;
+                        @media screen and (min-width: $aside-show-media) {
+                            display: grid;
+                            grid-template-columns: repeat(2, auto);
+                            grid-gap: 10px;
+                            width: 66vw;
                         }
 
-                        #donate {
-                            background-color: $main-green;
-                        }
+                        .event {
+                            border: 5px black solid;
+                            border-radius: 5px;
+                            background-color: rgb(230, 230, 230);
+                            margin-bottom: 10px;
 
-                        #donate, #subscribe {
-                            color: white;
-                            border: none;
-                            border-radius: 3px;
-                            margin-bottom: 6vw;
-                        }
+                            h3 {
+                                font-size: 1.3rem;
+                            }
 
-                    }
+                            * {
+                                padding: 20px;
+                            }
 
-                    .infos {
+                            p {
+                                text-align: justify;
+                            }
 
-                        p {
-                            padding: 0px;
-                            margin: 0px;
+                            #location::before {
+                                content: "\1F5F8     ";
+                            }
+
+                            .support-us-btns {
+                                display: flex;
+                                justify-content: space-evenly;
+
+                                #subscribe {
+                                    background-color: black;
+                                }
+
+                                #donate {
+                                    background-color: $main-green;
+                                }
+
+                                #donate, #subscribe {
+                                    color: white;
+                                    border: none;
+                                    border-radius: 3px;
+                                    margin-bottom: 5px;
+                                    padding: 10px;
+                                }
+                            }
+
+                            .infos {
+
+                                p {
+                                    padding: 0px;
+                                    margin: 0px;
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
 
-        aside {
+            aside {
+                display: none;
 
+                @media screen and (min-width: $aside-show-media) {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-left: 30px;
+
+                    section {
+                        margin-top: 0px;
+
+                        h4 {
+                            margin-top: -5px;
+                            text-align: center;
+                        }
+
+                        .green-peace-wrapper {
+                            background: linear-gradient(0.45deg, $green-peace-bg-1, $green-peace-bg-2, $green-peace-bg-3, $green-peace-bg-4);                        
+                            border-radius: 10px;
+                            width: 100%;
+                            
+                            .green-peace {
+                                color: white;
+                                background-color: black;
+                                border: 1px $green-peace-bg-2 solid;
+                                margin: 10px;
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                                padding: 10px;
+
+                                h5, p {
+                                    text-align: center;
+                                }
+                                
+                                h5 {
+                                    font-size: 1rem;
+                                }
+                            
+                                .link-wrapper {
+                                    background-color: white;
+                                    border-radius: 10px;
+                                    margin-bottom: 5px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: baseline;
+
+                                    a {
+                                        color: black;
+                                        margin: auto 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
     footer {
         background: $main-green;
         color: $footer-font-color;
+        margin-top: 50px;
 
         #hr-top {
             border: 2px $footer-font-color dotted;
