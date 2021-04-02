@@ -9,12 +9,23 @@ $header-height: 60px;
 $stats-bg-color: rgba(101, 125, 111, 0.08);
 $main-blue: rgb(38, 110, 134);
 $footer-font-color: rgb(61, 85, 71);
+
 $green-peace-bg-1: rgb(30, 90, 255);
 $green-peace-bg-2: rgb(225, 47, 95);
 $green-peace-bg-3: rgb(225, 47, 225);
 $green-peace-bg-4: rgb(205, 208, 38);
 
-$aside-show-media: 300px;
+$chandeniers-bg-1: rgb(30, 255, 75);
+$chandeniers-bg-2: rgb(47, 225, 172);
+$chandeniers-bg-3: rgb(237, 136, 237);
+$chandeniers-bg-4: rgb(227, 230, 48);
+
+$wwf-bg-1: rgb(216, 95, 30);
+$wwf-bg-2: rgb(239, 252, 62);
+$wwf-bg-3: rgb(32, 216, 87);
+$wwf-bg-4: rgb(197, 50, 24);
+
+$aside-show-media: 900px;
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -157,6 +168,10 @@ body {
                             width: 66vw;
                         }
 
+                        @media screen and (min-width: 1600px) {
+                            grid-template-columns: repeat(3, auto);
+                        }
+
                         .event {
                             border: 5px black solid;
                             border-radius: 5px;
@@ -217,23 +232,36 @@ body {
 
                 @media screen and (min-width: $aside-show-media) {
                     display: flex;
-                    justify-content: flex-end;
+                    flex-direction: column;
+                    justify-content: flex-start;
                     margin-left: 30px;
 
                     section {
                         margin-top: 0px;
+                        margin-bottom: 30px;
 
                         h4 {
                             margin-top: -5px;
                             text-align: center;
                         }
 
-                        .green-peace-wrapper {
+                        #green-peace {
                             background: linear-gradient(0.45deg, $green-peace-bg-1, $green-peace-bg-2, $green-peace-bg-3, $green-peace-bg-4);                        
+                        }
+
+                        #chandeniers {
+                            background: linear-gradient(0.45deg, $chandeniers-bg-1, $chandeniers-bg-2, $chandeniers-bg-3, $chandeniers-bg-4);                        
+                        }
+
+                        #wwf {
+                            background: linear-gradient(0.45deg, $wwf-bg-1, $wwf-bg-2, $wwf-bg-3, $wwf-bg-4);
+                        }
+
+                        .partner-wrapper {
                             border-radius: 10px;
                             width: 100%;
                             
-                            .green-peace {
+                            .partner {
                                 color: white;
                                 background-color: black;
                                 border: 1px $green-peace-bg-2 solid;
@@ -254,10 +282,11 @@ body {
                                 .link-wrapper {
                                     background-color: white;
                                     border-radius: 10px;
-                                    margin-bottom: 5px;
+                                    margin-bottom: 15px;
                                     display: flex;
                                     justify-content: center;
                                     align-items: baseline;
+                                    margin-inline: 25px;
 
                                     a {
                                         color: black;

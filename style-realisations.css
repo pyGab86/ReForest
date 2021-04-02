@@ -168,6 +168,13 @@ body main .action-show-off-wrapper .action-show-off {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 35vh;
+}
+
+@media screen and (max-width: 550px) {
+  body main .action-show-off-wrapper .action-show-off {
+    max-height: 60vh;
+  }
 }
 
 body main .action-show-off-wrapper .action-show-off img {

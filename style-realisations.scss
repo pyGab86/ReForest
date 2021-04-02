@@ -145,6 +145,13 @@ body {
                 border: 0px;
                 margin: 0px;
                 display: flex;
+                max-height: 35vh;
+
+                // Eviter les débordements de texte
+                // sur les petits écrans
+                @media screen and (max-width: 550px) {
+                    max-height: 60vh;
+                }
 
                 img {
                     object-fit: cover;

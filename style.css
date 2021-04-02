@@ -69,6 +69,42 @@ body header .header-top {
   height: 60px;
 }
 
+body header .header-top .menu, body header .header-top .account {
+  display: none;
+}
+
+@media (min-width: 745px) {
+  body header .header-top .burger-menu {
+    display: none;
+  }
+  body header .header-top .menu {
+    display: inline;
+  }
+  body header .header-top .menu nav ul li {
+    display: inline;
+    margin: auto 10px;
+  }
+  body header .header-top .menu nav ul li a {
+    color: white;
+  }
+  body header .header-top .menu nav ul li a:hover {
+    color: #3d5547;
+  }
+  body header .header-top .account {
+    display: inline;
+  }
+  body header .header-top .account button {
+    background-color: #e1db49;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    height: 25px;
+  }
+  body header .header-top .account button:hover {
+    color: #3d5547;
+  }
+}
+
 body header .header-top .branding > h1 {
   font-size: 1.4rem;
   -webkit-box-pack: start;
@@ -143,29 +179,31 @@ body main .hero-banner {
 }
 
 body main .hero-banner img {
-  height: 66vh;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 100vw;
 }
 
 body main .hero-banner h2 {
   font-size: 2rem;
   position: absolute;
   color: #657d6f;
-  padding: 9% 5%;
-  text-justify: distribute;
+  padding: 9vh 5%;
+  text-align: center;
   text-shadow: 2px 4px 10px rgba(143, 139, 139, 0.5);
 }
 
 body main .hero-banner .plant-tree-btn {
   font-size: 1.2rem;
   position: absolute;
-  margin: 66% 30%;
+  margin: 35vh;
   background-color: rgba(255, 255, 255, 0);
   border: 2px white solid;
   border-radius: 20px;
   width: 55%;
+  max-width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,8 +215,26 @@ body main .hero-banner .plant-tree-btn {
           align-items: center;
 }
 
+@media screen and (min-width: 745px) {
+  body main .hero-banner .plant-tree-btn {
+    margin: 53vh;
+  }
+}
+
 body main .hero-banner .plant-tree-btn a {
   color: white;
+}
+
+@media screen and (min-width: 745px) {
+  body main .hero-banner img {
+    height: 100vh;
+    width: auto;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  body main .hero-banner h2 {
+    font-size: 45px;
+  }
 }
 
 body main .grid-area {
@@ -188,6 +244,7 @@ body main .grid-area {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 50px auto;
 }
 
 body main .grid-area .about-us {
@@ -196,7 +253,7 @@ body main .grid-area .about-us {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 5vw;
 }
 
 body main .grid-area .about-us .about-block {
@@ -204,6 +261,8 @@ body main .grid-area .about-us .about-block {
   background: linear-gradient(#266e86, #657d6f);
   width: 40vw;
   height: 64vw;
+  max-width: 250px;
+  max-height: 400px;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.385);
           box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.385);
@@ -297,13 +356,16 @@ body main .stats .donate-argued {
   background-color: #657d6f;
   border-radius: 20px;
   font-weight: 500;
-  margin-inline: 10%;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  height: 6vh;
+  margin-top: 55px;
+  margin-bottom: 50px;
+  height: 42px;
+  width: 38vw;
+  max-width: 450px;
+  min-width: 250px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-inline: auto;
 }
 
 body main .stats .donate-argued a {

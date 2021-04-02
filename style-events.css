@@ -153,7 +153,7 @@ body main .main-layout {
   display: flex;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 900px) {
   body main .main-layout section .events-list .events-grid {
     display: -ms-grid;
     display: grid;
@@ -161,6 +161,13 @@ body main .main-layout {
         grid-template-columns: repeat(2, auto);
     grid-gap: 10px;
     width: 66vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body main .main-layout section .events-list .events-grid {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
   }
 }
 
@@ -221,29 +228,42 @@ body main .main-layout aside {
   display: none;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 900px) {
   body main .main-layout aside {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     margin-left: 30px;
   }
   body main .main-layout aside section {
     margin-top: 0px;
+    margin-bottom: 30px;
   }
   body main .main-layout aside section h4 {
     margin-top: -5px;
     text-align: center;
   }
-  body main .main-layout aside section .green-peace-wrapper {
+  body main .main-layout aside section #green-peace {
     background: linear-gradient(0.45deg, #1e5aff, #e12f5f, #e12fe1, #cdd026);
+  }
+  body main .main-layout aside section #chandeniers {
+    background: linear-gradient(0.45deg, #1eff4b, #2fe1ac, #ed88ed, #e3e630);
+  }
+  body main .main-layout aside section #wwf {
+    background: linear-gradient(0.45deg, #d85f1e, #effc3e, #20d857, #c53218);
+  }
+  body main .main-layout aside section .partner-wrapper {
     border-radius: 10px;
     width: 100%;
   }
-  body main .main-layout aside section .green-peace-wrapper .green-peace {
+  body main .main-layout aside section .partner-wrapper .partner {
     color: white;
     background-color: black;
     border: 1px #e12f5f solid;
@@ -260,16 +280,16 @@ body main .main-layout aside {
             flex-direction: column;
     padding: 10px;
   }
-  body main .main-layout aside section .green-peace-wrapper .green-peace h5, body main .main-layout aside section .green-peace-wrapper .green-peace p {
+  body main .main-layout aside section .partner-wrapper .partner h5, body main .main-layout aside section .partner-wrapper .partner p {
     text-align: center;
   }
-  body main .main-layout aside section .green-peace-wrapper .green-peace h5 {
+  body main .main-layout aside section .partner-wrapper .partner h5 {
     font-size: 1rem;
   }
-  body main .main-layout aside section .green-peace-wrapper .green-peace .link-wrapper {
+  body main .main-layout aside section .partner-wrapper .partner .link-wrapper {
     background-color: white;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -279,8 +299,9 @@ body main .main-layout aside {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+    margin-inline: 25px;
   }
-  body main .main-layout aside section .green-peace-wrapper .green-peace .link-wrapper a {
+  body main .main-layout aside section .partner-wrapper .partner .link-wrapper a {
     color: black;
     margin: auto 5px;
   }
