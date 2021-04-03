@@ -44,6 +44,46 @@
   }
 }
 
+@-webkit-keyframes menu-hover-animation {
+  from {
+    border-bottom: 1px #657d6f solid;
+  }
+  to {
+    border-bottom: 1px white solid;
+  }
+}
+
+@keyframes menu-hover-animation {
+  from {
+    border-bottom: 1px #657d6f solid;
+  }
+  to {
+    border-bottom: 1px white solid;
+  }
+}
+
+@-webkit-keyframes member-button-animation {
+  from {
+    background-color: #657d6f;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: #657d6f;
+  }
+}
+
+@keyframes member-button-animation {
+  from {
+    background-color: #657d6f;
+    color: white;
+  }
+  to {
+    background-color: white;
+    color: #657d6f;
+  }
+}
+
 body {
   font-family: 'Neue';
   margin: 0px;
@@ -53,7 +93,16 @@ body * {
   text-decoration: none;
 }
 
+@media screen and (min-width: 800px) {
+  body header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+  }
+}
+
 body header .header-top {
+  padding: 0 5vw;
   background-color: #657d6f;
   color: white;
   display: -webkit-box;
@@ -65,7 +114,7 @@ body header .header-top {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0px 15px;
+  padding: 0 5vw;
   height: 60px;
 }
 
@@ -73,7 +122,12 @@ body header .header-top .menu, body header .header-top .account {
   display: none;
 }
 
-@media (min-width: 745px) {
+@media (min-width: 800px) {
+  body header .header-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   body header .header-top .burger-menu {
     display: none;
   }
@@ -81,27 +135,34 @@ body header .header-top .menu, body header .header-top .account {
     display: inline;
   }
   body header .header-top .menu nav ul li {
+    padding-bottom: 7px;
+    border-bottom: 1px #657d6f solid;
     display: inline;
     margin: auto 10px;
   }
   body header .header-top .menu nav ul li a {
     color: white;
   }
-  body header .header-top .menu nav ul li a:hover {
-    color: #3d5547;
+  body header .header-top .menu nav ul a:hover {
+    -webkit-animation: menu-hover-animation 1s ease;
+            animation: menu-hover-animation 1s ease;
+    border-bottom: 1px white solid;
   }
   body header .header-top .account {
     display: inline;
   }
-  body header .header-top .account button {
-    background-color: #e1db49;
-    color: white;
-    border: 0px;
-    border-radius: 15px;
-    height: 25px;
-  }
   body header .header-top .account button:hover {
-    color: #3d5547;
+    -webkit-animation: member-button-animation 0.6s ease-out;
+            animation: member-button-animation 0.6s ease-out;
+    background-color: white;
+    color: #657d6f;
+  }
+  body header .header-top .account button {
+    background-color: #657d6f;
+    color: white;
+    border: 2px white solid;
+    border-radius: 8px;
+    height: 25px;
   }
 }
 

@@ -27,7 +27,8 @@ $wwf-bg-4: rgb(197, 50, 24);
 
 $aside-show-media: 985px;
 
-$main-breakpoint: 745px;
+$main-breakpoint: 800px;
+
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -51,6 +52,18 @@ $main-breakpoint: 745px;
     to {background-color: $grey;}
 }
 
+@keyframes menu-hover-animation {
+    from {border-bottom: 1px $main-green solid;} 
+    to {border-bottom: 1px white solid;}
+}
+
+@keyframes member-button-animation {
+    from {background-color: $main-green;
+        color: white;}
+    to {background-color: white;
+        color: $main-green;}
+}
+
 body {
     
     * {
@@ -62,13 +75,19 @@ body {
 
     header {
 
+        @media screen and (min-width: $main-breakpoint) {
+            width: 100%;
+            position: fixed;
+            top: 0px;
+        }
+
         .header-top {
             background-color: $main-green;
             color: white;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0px 15px;
+            padding: 0 5vw;
             height: $header-height;
 
             .menu, .account {
@@ -78,6 +97,7 @@ body {
             // Cette media query permet de ne pas afficher le contenu du menu burger
             // Et d'afficher à la place, le menu directement dans le header.
             @media (min-width: $main-breakpoint) {
+                display: flex;
 
                 .burger-menu {
                     display: none;
@@ -91,16 +111,19 @@ body {
                         ul {
 
                             li {
+                                padding-bottom: 7px;
+                                border-bottom: 1px $main-green solid;
                                 display: inline;
                                 margin: auto 10px;
 
                                 a {
                                     color: white;
-                                }
+                                }                               
+                            }
 
-                                a:hover {
-                                    color: $footer-font-color;
-                                }
+                            a:hover {
+                                animation: menu-hover-animation 1s ease;
+                                border-bottom: 1px white solid;
                             }
                         }
                     }
@@ -108,18 +131,22 @@ body {
 
                 .account {
                     display: inline;
-                    
+
+                    button:hover {
+                        animation: member-button-animation 0.6s ease-out;
+                        background-color: white;
+                        color: $main-green
+                    }
+
                     button {
-                        background-color: $main-yellow;
+                        background-color: $main-green;
                         color: white;
-                        border: 0px;
-                        border-radius: 15px;
+                        border: 2px white solid;
+                        border-radius: 8px;
                         height: 25px;
                     }
 
-                    button:hover {
-                        color: $footer-font-color;
-                    }
+                    
                 }
             }
 
@@ -190,7 +217,7 @@ body {
     }
 
     main {
-        margin-top: 66px;
+        margin-top: 80px;
         padding: 0 5vw;
 
         .events-text {

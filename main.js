@@ -1,6 +1,8 @@
 var burger = $('.burger-menu');
 var header = $('header');
 
+var memberButton = document.getElementById('member');
+
 var menuShown = false;
 
 var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
