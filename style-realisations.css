@@ -69,6 +69,42 @@ body header .header-top {
   height: 60px;
 }
 
+body header .header-top .menu, body header .header-top .account {
+  display: none;
+}
+
+@media (min-width: 745px) {
+  body header .header-top .burger-menu {
+    display: none;
+  }
+  body header .header-top .menu {
+    display: inline;
+  }
+  body header .header-top .menu nav ul li {
+    display: inline;
+    margin: auto 10px;
+  }
+  body header .header-top .menu nav ul li a {
+    color: white;
+  }
+  body header .header-top .menu nav ul li a:hover {
+    color: #3d5547;
+  }
+  body header .header-top .account {
+    display: inline;
+  }
+  body header .header-top .account button {
+    background-color: #e1db49;
+    color: white;
+    border: 0px;
+    border-radius: 15px;
+    height: 25px;
+  }
+  body header .header-top .account button:hover {
+    color: #3d5547;
+  }
+}
+
 body header .header-top .branding > h1 {
   font-size: 1.4rem;
   -webkit-box-pack: start;
@@ -135,6 +171,16 @@ body main {
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#657d6f));
   background: linear-gradient(white, #657d6f);
   padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main .page-title {
@@ -160,6 +206,7 @@ body main .action-show-off-wrapper {
   padding: 5px 5px;
   -webkit-box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
           box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
+  max-width: 900px;
 }
 
 body main .action-show-off-wrapper .action-show-off {
@@ -190,14 +237,14 @@ body main .action-show-off-wrapper .action-show-off .paragraph {
 }
 
 body main .action-show-off-wrapper .action-show-off .paragraph p {
-  padding: 0px 2vw;
+  padding: 0px 30px;
   color: #657d6f;
   text-align: justify;
 }
 
 body main .action-show-off-wrapper .action-show-off .paragraph h2 {
   color: #657d6f;
-  margin: 1vw 2vw;
+  margin: 10px 30px;
 }
 
 body main #first {

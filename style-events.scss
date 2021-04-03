@@ -25,7 +25,9 @@ $wwf-bg-2: rgb(239, 252, 62);
 $wwf-bg-3: rgb(32, 216, 87);
 $wwf-bg-4: rgb(197, 50, 24);
 
-$aside-show-media: 900px;
+$aside-show-media: 985px;
+
+$main-breakpoint: 745px;
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -68,6 +70,58 @@ body {
             justify-content: space-between;
             padding: 0px 15px;
             height: $header-height;
+
+            .menu, .account {
+                display: none;
+            }
+
+            // Cette media query permet de ne pas afficher le contenu du menu burger
+            // Et d'afficher à la place, le menu directement dans le header.
+            @media (min-width: $main-breakpoint) {
+
+                .burger-menu {
+                    display: none;
+                }
+                
+                .menu {
+                    display: inline;
+
+                    nav {
+
+                        ul {
+
+                            li {
+                                display: inline;
+                                margin: auto 10px;
+
+                                a {
+                                    color: white;
+                                }
+
+                                a:hover {
+                                    color: $footer-font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .account {
+                    display: inline;
+                    
+                    button {
+                        background-color: $main-yellow;
+                        color: white;
+                        border: 0px;
+                        border-radius: 15px;
+                        height: 25px;
+                    }
+
+                    button:hover {
+                        color: $footer-font-color;
+                    }
+                }
+            }
 
             .branding > h1 {
                 font-size: 1.4rem;
@@ -136,6 +190,7 @@ body {
     }
 
     main {
+        margin-top: 66px;
         padding: 0 5vw;
 
         .events-text {
@@ -198,6 +253,36 @@ body {
                                 display: flex;
                                 justify-content: space-evenly;
 
+                                #go, #give {
+                                    display: none;
+                                }
+
+                                /*
+                                @media screen and (max-width: 985px) {
+
+                                    #go {
+                                        background-color: black;
+                                    }
+
+                                    #give {
+                                        background-color: $main-green;
+                                    }
+
+                                    #go, #give {
+                                        color: white;
+                                        border: none;
+                                        border-radius: 3px;
+                                        margin-bottom: 5px;
+                                        padding: 10px;
+                                        display: block;
+                                    }
+
+                                    #subscribe, #donate {
+                                        display: none;
+                                    }
+                                }
+                                */
+
                                 #subscribe {
                                     background-color: black;
                                 }
@@ -230,7 +315,7 @@ body {
             aside {
                 display: none;
 
-                @media screen and (min-width: $aside-show-media) {
+                @media screen and (min-width: 675px) {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;

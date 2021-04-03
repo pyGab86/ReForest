@@ -10,6 +10,8 @@ $stats-bg-color: rgba(101, 125, 111, 0.08);
 $main-blue: rgb(38, 110, 134);
 $footer-font-color: rgb(61, 85, 71);
 
+$main-breakpoint: 745px;
+
 // Charger la police Neue Haas Unica
 @font-face {
     font-family: 'Neue';
@@ -51,6 +53,58 @@ body {
             justify-content: space-between;
             padding: 0px 15px;
             height: $header-height;
+
+            .menu, .account {
+                display: none;
+            }
+
+            // Cette media query permet de ne pas afficher le contenu du menu burger
+            // Et d'afficher à la place, le menu directement dans le header.
+            @media (min-width: $main-breakpoint) {
+
+                .burger-menu {
+                    display: none;
+                }
+                
+                .menu {
+                    display: inline;
+
+                    nav {
+
+                        ul {
+
+                            li {
+                                display: inline;
+                                margin: auto 10px;
+
+                                a {
+                                    color: white;
+                                }
+
+                                a:hover {
+                                    color: $footer-font-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .account {
+                    display: inline;
+                    
+                    button {
+                        background-color: $main-yellow;
+                        color: white;
+                        border: 0px;
+                        border-radius: 15px;
+                        height: 25px;
+                    }
+
+                    button:hover {
+                        color: $footer-font-color;
+                    }
+                }
+            }
 
             .branding > h1 {
                 font-size: 1.4rem;
@@ -121,6 +175,9 @@ body {
     main {
         background: linear-gradient(white, $main-green);
         padding-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .page-title {
             display: flex;
@@ -140,12 +197,14 @@ body {
             border-radius: 5px;
             padding: 5px 5px;
             box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
+            max-width: 900px;
 
             .action-show-off {
                 border: 0px;
                 margin: 0px;
                 display: flex;
                 max-height: 35vh;
+
 
                 // Eviter les débordements de texte
                 // sur les petits écrans
@@ -164,14 +223,14 @@ body {
                     border-radius: 0px 5px 5px 0px;
 
                     p {
-                        padding: 0px 2vw;
+                        padding: 0px 30px;
                         color: $main-green;
                         text-align: justify;
                     }
 
                     h2 {
                         color: $main-green;
-                        margin: 1vw 2vw;
+                        margin: 10px 30px;
                     }
                 }
             }

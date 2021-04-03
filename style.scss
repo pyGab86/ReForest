@@ -35,6 +35,12 @@ $main-breakpoint: 745px;
     to {background-color: $grey;}
 }
 
+@keyframes about-title-size {
+    0% {font-size: 1rem;}
+    50% {font-size: 2.2rem;}
+    100% {font-size: 1rem;}
+}
+
 
 body {
 
@@ -238,6 +244,18 @@ body {
             display: flex;
             justify-content: center;
             margin: 50px auto;
+
+            @media screen and (min-width: 900px) {
+                background: $stats-bg-color;
+                border-radius: 450px;
+                border: 5px rgba(101, 125, 111, 0.28) solid;
+                justify-items: center;
+                max-width: 800px;
+
+                .about-block:hover {
+                    animation: about-title-size 0.38s alternate ease-in;
+                }
+            }
             
             .about-us {
                 margin: 30px 0px;
@@ -287,6 +305,14 @@ body {
                 display: flex;
                 justify-content: space-evenly;
                 margin-top: 30px;
+
+                @media screen and (min-width: 900px) {
+                    justify-content: center;
+
+                    div {
+                        margin-inline: 50px;
+                    }
+                }
 
                 div {
                     display: flex;
