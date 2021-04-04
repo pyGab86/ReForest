@@ -209,11 +209,18 @@ body {
             justify-content: center;
 
             h1 {
+                display: block;
                 color: $main-green;
-                padding: 0px;
+                padding-top: 50px;
+                padding-bottom: 35px;
                 margin: 10px 0px;
-                margin-top: 20px;
                 font-size: 1.66rem;
+            }
+
+            @media screen and (min-width: $main-breakpoint) {
+                h1 {
+                    padding-top: 110px;
+                }
             }
         }
 
@@ -227,19 +234,12 @@ body {
             .action-show-off {
                 border: 0px;
                 margin: 0px;
-                display: flex;
-                max-height: 35vh;
-
-
-                // Eviter les débordements de texte
-                // sur les petits écrans
-                @media screen and (max-width: 550px) {
-                    max-height: 60vh;
-                }
+                display: grid;
+                grid-template-columns: 35% 65%;
 
                 img {
                     object-fit: cover;
-                    max-width: 50%;
+                    width: 100%;
                     border-radius: 5px 0px 0px 5px;
                 }
 
@@ -269,7 +269,6 @@ body {
             background: linear-gradient(0.45turn, rgb(170, 170, 170), rgb(210, 210, 210));
 
             .action-show-off {
-                flex-direction: row-reverse;
 
                 img {
                     border-radius: 0px 5px 5px 0px;

@@ -108,6 +108,42 @@
   }
 }
 
+@-webkit-keyframes plant-button-animation {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: #657d6f;
+  }
+}
+
+@keyframes plant-button-animation {
+  from {
+    background-color: none;
+  }
+  to {
+    background-color: #657d6f;
+  }
+}
+
+@-webkit-keyframes plant-button-a-animation {
+  from {
+    color: #657d6f;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes plant-button-a-animation {
+  from {
+    color: #657d6f;
+  }
+  to {
+    color: white;
+  }
+}
+
 body {
   font-family: 'Neue';
   margin: 0px;
@@ -264,33 +300,29 @@ body main .hero-banner {
 }
 
 body main .hero-banner img {
-  width: 100%;
-  height: 55vh;
+  width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+  max-width: 100%;
 }
 
 body main .hero-banner h2 {
+  text-align: center;
   font-size: 2rem;
   position: absolute;
   color: #657d6f;
-  padding: 2.5vh 5%;
-  text-align: center;
+  margin-top: 75px;
   text-shadow: 2px 4px 10px rgba(143, 139, 139, 0.5);
-}
-
-@media screen and (min-width: 800px) {
-  body main .hero-banner h2 {
-    padding: 10vh 5%;
-  }
 }
 
 body main .hero-banner .plant-tree-btn {
   font-size: 1.2rem;
   position: absolute;
-  margin: 35vh;
+  margin: 28vh 0;
+  margin-top: 275px;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px white solid;
+  border: 5px #657d6f solid;
   border-radius: 20px;
   width: 55%;
   max-width: 300px;
@@ -305,25 +337,57 @@ body main .hero-banner .plant-tree-btn {
           align-items: center;
 }
 
-@media screen and (min-width: 800px) {
-  body main .hero-banner .plant-tree-btn {
-    margin: 53vh;
-  }
+body main .hero-banner .plant-tree-btn a {
+  color: #657d6f;
+  font-style: 'Neue Bold';
+  font-weight: 500;
 }
 
-body main .hero-banner .plant-tree-btn a {
+body main .hero-banner .plant-tree-btn:hover {
+  -webkit-animation: plant-button-animation 1s ease;
+          animation: plant-button-animation 1s ease;
+  background-color: #657d6f;
+  cursor: pointer;
+}
+
+body main .hero-banner .plant-tree-btn:hover a {
+  -webkit-animation: plant-button-a-animation 1.32s ease;
+          animation: plant-button-a-animation 1.32s ease;
   color: white;
 }
 
 @media screen and (min-width: 800px) {
-  body main .hero-banner img {
-    height: 100vh;
-    width: auto;
+  body main .hero-banner {
     max-width: 100%;
-    min-width: 100%;
+  }
+  body main .hero-banner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 400px;
+    border-radius: 0px 0px 15vw 15vw;
+    -webkit-filter: contrast(80%);
+            filter: contrast(80%);
+    max-width: 100vw;
   }
   body main .hero-banner h2 {
+    padding: 5vh 5%;
     font-size: 45px;
+    color: #657d6f;
+    text-shadow: none;
+  }
+  body main .hero-banner .plant-tree-btn {
+    border: 5px white solid;
+    background-color: #657d6f;
+    margin-top: 270px;
+  }
+  body main .hero-banner .plant-tree-btn a {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 800px) and (orientation: portrait) {
+  body main .hero-banner h2 {
+    margin: 1.3vh auto;
   }
 }
 
@@ -364,7 +428,6 @@ body main .grid-area .about-us {
 
 body main .grid-area .about-us .about-wrapper {
   padding: 0px;
-  border-radius: 20px;
 }
 
 body main .grid-area .about-us .about-wrapper .about-text {
@@ -379,7 +442,7 @@ body main .grid-area .about-us .about-wrapper .about-text {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 50px;
+    margin: 50px 50px;
     max-width: 800px;
   }
   body main .grid-area .about-us .about-wrapper .about-text {

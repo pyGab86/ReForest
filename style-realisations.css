@@ -254,11 +254,18 @@ body main .page-title {
 }
 
 body main .page-title h1 {
+  display: block;
   color: #657d6f;
-  padding: 0px;
+  padding-top: 50px;
+  padding-bottom: 35px;
   margin: 10px 0px;
-  margin-top: 20px;
   font-size: 1.66rem;
+}
+
+@media screen and (min-width: 800px) {
+  body main .page-title h1 {
+    padding-top: 110px;
+  }
 }
 
 body main .action-show-off-wrapper {
@@ -273,22 +280,16 @@ body main .action-show-off-wrapper {
 body main .action-show-off-wrapper .action-show-off {
   border: 0px;
   margin: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-height: 35vh;
-}
-
-@media screen and (max-width: 550px) {
-  body main .action-show-off-wrapper .action-show-off {
-    max-height: 60vh;
-  }
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 65%;
+      grid-template-columns: 35% 65%;
 }
 
 body main .action-show-off-wrapper .action-show-off img {
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: 50%;
+  width: 100%;
   border-radius: 5px 0px 0px 5px;
 }
 
@@ -314,13 +315,6 @@ body main #first {
 
 body main #second {
   background: linear-gradient(0.45turn, #aaaaaa, #d2d2d2);
-}
-
-body main #second .action-show-off {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
 }
 
 body main #second .action-show-off img {
