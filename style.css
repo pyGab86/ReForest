@@ -571,6 +571,9 @@ body main .grid-area .about-us .about-wrapper .about-block .learn-more {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main .grid-area .about-us .about-wrapper .about-block .learn-more a {

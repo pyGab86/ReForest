@@ -10,6 +10,7 @@ $stats-bg-color: rgba(101, 125, 111, 0.08);
 $main-blue: rgb(38, 110, 134);
 $footer-font-color: rgb(61, 85, 71);
 
+$small-breakpoint: 675px;
 $main-breakpoint: 804px;
 
 // Charger la police Neue Haas Unica
@@ -240,22 +241,43 @@ body {
             padding: 5px 5px;
             box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
             max-width: 900px;
+            max-height: 62vh;
+
+            @media screen and (min-width: 380px) {
+                max-height: 55vh;
+            }
+
+            @media screen and (min-width: 416px) {
+                max-height: 45vh;
+            }
 
             .action-show-off {
                 border: 0px;
                 margin: 0px;
                 display: grid;
-                grid-template-columns: 35% 65%;
+                grid-template-rows: 35% 65%;
+                max-height: 62vh;
+
+                @media screen and (min-width: 380px) {
+                    max-height: 55vh;
+                }
+
+                @media screen and (min-width: 416px) {
+                    max-height: 45vh;
+                }
+                
 
                 img {
                     object-fit: cover;
                     width: 100%;
-                    border-radius: 5px 0px 0px 5px;
+                    border-radius: 5px 5px 0px 0px;
+                    max-height: 100%;
                 }
 
                 .paragraph {
                     background-color: white;
-                    border-radius: 0px 5px 5px 0px;
+                    border-radius: 0px 0px 5px 5px;
+                    padding: 0px;
 
                     p {
                         padding: 0px 30px;
@@ -265,8 +287,27 @@ body {
 
                     h2 {
                         color: $main-green;
-                        margin: 10px 30px;
+                        padding: 10px 30px;
                     }
+                }
+
+                @media screen and (min-width: $small-breakpoint) {
+
+                    img {
+                        border-radius: 5px 0px 0px 5px;
+                    }
+
+                    .paragraph {
+                        border-radius: 0px 5px 5px 0px;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $small-breakpoint) {
+
+                .action-show-off {
+                    grid-template-rows: max-content;
+                    grid-template-columns: 35% 65%;
                 }
             }
         }
@@ -277,17 +318,6 @@ body {
 
         #second {
             background: linear-gradient(0.45turn, rgb(170, 170, 170), rgb(210, 210, 210));
-
-            .action-show-off {
-
-                img {
-                    border-radius: 0px 5px 5px 0px;
-                }
-
-                .paragraph {
-                    border-radius: 5px 0px 0px 5px;
-                }
-            }
         }
 
         #third {

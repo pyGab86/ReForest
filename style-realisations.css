@@ -283,6 +283,19 @@ body main .action-show-off-wrapper {
   -webkit-box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
           box-shadow: 3px 3px 10px rgba(66, 66, 66, 0.6);
   max-width: 900px;
+  max-height: 62vh;
+}
+
+@media screen and (min-width: 380px) {
+  body main .action-show-off-wrapper {
+    max-height: 55vh;
+  }
+}
+
+@media screen and (min-width: 416px) {
+  body main .action-show-off-wrapper {
+    max-height: 45vh;
+  }
 }
 
 body main .action-show-off-wrapper .action-show-off {
@@ -290,20 +303,35 @@ body main .action-show-off-wrapper .action-show-off {
   margin: 0px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 35% 65%;
-      grid-template-columns: 35% 65%;
+  -ms-grid-rows: 35% 65%;
+      grid-template-rows: 35% 65%;
+  max-height: 62vh;
+}
+
+@media screen and (min-width: 380px) {
+  body main .action-show-off-wrapper .action-show-off {
+    max-height: 55vh;
+  }
+}
+
+@media screen and (min-width: 416px) {
+  body main .action-show-off-wrapper .action-show-off {
+    max-height: 45vh;
+  }
 }
 
 body main .action-show-off-wrapper .action-show-off img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 5px 5px 0px 0px;
+  max-height: 100%;
 }
 
 body main .action-show-off-wrapper .action-show-off .paragraph {
   background-color: white;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 0px 5px 5px;
+  padding: 0px;
 }
 
 body main .action-show-off-wrapper .action-show-off .paragraph p {
@@ -314,7 +342,26 @@ body main .action-show-off-wrapper .action-show-off .paragraph p {
 
 body main .action-show-off-wrapper .action-show-off .paragraph h2 {
   color: #657d6f;
-  margin: 10px 30px;
+  padding: 10px 30px;
+}
+
+@media screen and (min-width: 675px) {
+  body main .action-show-off-wrapper .action-show-off img {
+    border-radius: 5px 0px 0px 5px;
+  }
+  body main .action-show-off-wrapper .action-show-off .paragraph {
+    border-radius: 0px 5px 5px 0px;
+  }
+}
+
+@media screen and (min-width: 675px) {
+  body main .action-show-off-wrapper .action-show-off {
+    -ms-grid-rows: max-content;
+        grid-template-rows: -webkit-max-content;
+        grid-template-rows: max-content;
+    -ms-grid-columns: 35% 65%;
+        grid-template-columns: 35% 65%;
+  }
 }
 
 body main #first {
@@ -323,14 +370,6 @@ body main #first {
 
 body main #second {
   background: linear-gradient(0.45turn, #aaaaaa, #d2d2d2);
-}
-
-body main #second .action-show-off img {
-  border-radius: 0px 5px 5px 0px;
-}
-
-body main #second .action-show-off .paragraph {
-  border-radius: 5px 0px 0px 5px;
 }
 
 body main #third {
