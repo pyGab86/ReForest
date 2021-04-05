@@ -93,7 +93,7 @@ body * {
   text-decoration: none;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 804px) {
   body header {
     width: 100%;
     position: fixed;
@@ -121,7 +121,15 @@ body header .header-top .menu, body header .header-top .account {
   display: none;
 }
 
-@media (min-width: 800px) {
+body header .header-top .branding a {
+  font-size: 1.2rem;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@media (min-width: 804px) {
   body header .header-top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -287,7 +295,7 @@ body main .main-layout section .events-list .events-grid .event p {
   text-align: justify;
 }
 
-body main .main-layout section .events-list .events-grid .event #location::before {
+body main .main-layout section .events-list .events-grid .event .location::before {
   content: "\1F5F8     ";
 }
 
@@ -298,51 +306,56 @@ body main .main-layout section .events-list .events-grid .event .support-us-btns
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  /*
-                                @media screen and (max-width: 985px) {
-
-                                    #go {
-                                        background-color: black;
-                                    }
-
-                                    #give {
-                                        background-color: $main-green;
-                                    }
-
-                                    #go, #give {
-                                        color: white;
-                                        border: none;
-                                        border-radius: 3px;
-                                        margin-bottom: 5px;
-                                        padding: 10px;
-                                        display: block;
-                                    }
-
-                                    #subscribe, #donate {
-                                        display: none;
-                                    }
-                                }
-                                */
 }
 
-body main .main-layout section .events-list .events-grid .event .support-us-btns #go, body main .main-layout section .events-list .events-grid .event .support-us-btns #give {
+body main .main-layout section .events-list .events-grid .event .support-us-btns .go, body main .main-layout section .events-list .events-grid .event .support-us-btns .give {
   display: none;
 }
 
-body main .main-layout section .events-list .events-grid .event .support-us-btns #subscribe {
+@media screen and (max-width: 804px) {
+  body main .main-layout section .events-list .events-grid .event .support-us-btns .subscribe, body main .main-layout section .events-list .events-grid .event .support-us-btns .donate {
+    display: none;
+  }
+  body main .main-layout section .events-list .events-grid .event .support-us-btns .go {
+    background-color: black;
+  }
+  body main .main-layout section .events-list .events-grid .event .support-us-btns .give {
+    background-color: #657d6f;
+  }
+  body main .main-layout section .events-list .events-grid .event .support-us-btns .go, body main .main-layout section .events-list .events-grid .event .support-us-btns .give {
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 10px;
+    display: block;
+  }
+}
+
+body main .main-layout section .events-list .events-grid .event .support-us-btns .subscribe {
   background-color: black;
 }
 
-body main .main-layout section .events-list .events-grid .event .support-us-btns #donate {
+body main .main-layout section .events-list .events-grid .event .support-us-btns .donate {
   background-color: #657d6f;
 }
 
-body main .main-layout section .events-list .events-grid .event .support-us-btns #donate, body main .main-layout section .events-list .events-grid .event .support-us-btns #subscribe {
+body main .main-layout section .events-list .events-grid .event .support-us-btns .donate, body main .main-layout section .events-list .events-grid .event .support-us-btns .subscribe {
   color: white;
   border: none;
   border-radius: 3px;
   margin-bottom: 5px;
   padding: 10px;
+}
+
+body main .main-layout section .events-list .events-grid .event .support-us-btns .subscribe:hover {
+  background-color: #c8c8c8;
+  color: black;
+}
+
+body main .main-layout section .events-list .events-grid .event .support-us-btns .donate:hover {
+  background-color: #c8c8c8;
+  color: black;
 }
 
 body main .main-layout section .events-list .events-grid .event .infos p {

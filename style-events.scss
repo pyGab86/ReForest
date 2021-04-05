@@ -27,7 +27,7 @@ $wwf-bg-4: rgb(197, 50, 24);
 
 $aside-show-media: 985px;
 
-$main-breakpoint: 800px;
+$main-breakpoint: 804px;
 
 
 // Charger la police Neue Haas Unica
@@ -92,6 +92,16 @@ body {
 
             .menu, .account {
                 display: none;
+            }
+
+            .branding {
+                a {
+                    font-size: 1.2rem;
+                    color: white;
+                    letter-spacing: 2px;
+                    font-weight: 300;
+                    font-style: italic;
+                }
             }
 
             // Cette media query permet de ne pas afficher le contenu du menu burger
@@ -272,7 +282,7 @@ body {
                                 text-align: justify;
                             }
 
-                            #location::before {
+                            .location::before {
                                 content: "\1F5F8     ";
                             }
 
@@ -280,22 +290,26 @@ body {
                                 display: flex;
                                 justify-content: space-evenly;
 
-                                #go, #give {
+                                .go, .give {
                                     display: none;
                                 }
 
-                                /*
-                                @media screen and (max-width: 985px) {
+                                // On affiche des boutons au texte plus court sur petits écrans
+                                @media screen and (max-width: $main-breakpoint) {
 
-                                    #go {
+                                    .subscribe, .donate {
+                                        display: none;
+                                    }
+
+                                    .go {
                                         background-color: black;
                                     }
 
-                                    #give {
+                                    .give {
                                         background-color: $main-green;
                                     }
 
-                                    #go, #give {
+                                    .go, .give {
                                         color: white;
                                         border: none;
                                         border-radius: 3px;
@@ -303,27 +317,32 @@ body {
                                         padding: 10px;
                                         display: block;
                                     }
-
-                                    #subscribe, #donate {
-                                        display: none;
-                                    }
                                 }
-                                */
 
-                                #subscribe {
+                                .subscribe {
                                     background-color: black;
                                 }
 
-                                #donate {
+                                .donate {
                                     background-color: $main-green;
                                 }
 
-                                #donate, #subscribe {
+                                .donate, .subscribe {
                                     color: white;
                                     border: none;
                                     border-radius: 3px;
                                     margin-bottom: 5px;
                                     padding: 10px;
+                                }
+
+                                .subscribe:hover {
+                                    background-color: rgb(200, 200, 200);
+                                    color: black;
+                                }
+
+                                .donate:hover {
+                                    background-color: rgb(200, 200, 200);
+                                    color: black;
                                 }
                             }
 

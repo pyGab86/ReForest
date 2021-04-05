@@ -10,7 +10,7 @@ $stats-bg-color: rgba(101, 125, 111, 0.08);
 $main-blue: rgb(38, 110, 134);
 $footer-font-color: rgb(61, 85, 71);
 
-$main-breakpoint: 800px;
+$main-breakpoint: 804px;
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -75,6 +75,16 @@ body {
 
             .menu, .account {
                 display: none;
+            }
+
+            .branding {
+                a {
+                    font-size: 1.2rem;
+                    color: white;
+                    letter-spacing: 2px;
+                    font-weight: 300;
+                    font-style: italic;
+                }
             }
 
             // Cette media query permet de ne pas afficher le contenu du menu burger
