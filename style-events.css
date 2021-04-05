@@ -276,6 +276,12 @@ body main .main-layout {
   }
 }
 
+@media screen and (min-width: 675px) {
+  body main .main-layout section .events-list .events-grid .location::before {
+    content: "\1F5F8     ";
+  }
+}
+
 body main .main-layout section .events-list .events-grid .event {
   border: 5px black solid;
   border-radius: 5px;
@@ -293,10 +299,6 @@ body main .main-layout section .events-list .events-grid .event * {
 
 body main .main-layout section .events-list .events-grid .event p {
   text-align: justify;
-}
-
-body main .main-layout section .events-list .events-grid .event .location::before {
-  content: "\1F5F8     ";
 }
 
 body main .main-layout section .events-list .events-grid .event .support-us-btns {
@@ -444,6 +446,10 @@ body main .main-layout aside {
     color: black;
     margin: auto 5px;
   }
+}
+
+body main .covid p {
+  text-align: justify;
 }
 
 body footer {

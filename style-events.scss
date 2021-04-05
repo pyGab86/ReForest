@@ -25,10 +25,10 @@ $wwf-bg-2: rgb(239, 252, 62);
 $wwf-bg-3: rgb(32, 216, 87);
 $wwf-bg-4: rgb(197, 50, 24);
 
+$small-breakpoint: 675px;
 $aside-show-media: 985px;
-
 $main-breakpoint: 804px;
-
+$big-breakpoint: 1600px;
 
 // Charger la police Neue Haas Unica
 @font-face {
@@ -260,8 +260,15 @@ body {
                             width: 66vw;
                         }
 
-                        @media screen and (min-width: 1600px) {
+                        @media screen and (min-width: $big-breakpoint) {
                             grid-template-columns: repeat(3, auto);
+                        }
+
+                        @media screen and (min-width: $small-breakpoint) {
+
+                            .location::before {
+                                content: "\1F5F8     ";
+                            }
                         }
 
                         .event {
@@ -280,10 +287,6 @@ body {
 
                             p {
                                 text-align: justify;
-                            }
-
-                            .location::before {
-                                content: "\1F5F8     ";
                             }
 
                             .support-us-btns {
@@ -361,7 +364,7 @@ body {
             aside {
                 display: none;
 
-                @media screen and (min-width: 675px) {
+                @media screen and (min-width: $small-breakpoint) {
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -430,6 +433,13 @@ body {
                 }
             }
         }
+
+        .covid {
+            p {
+                text-align: justify;
+            }
+        }
+
     }
 
     footer {

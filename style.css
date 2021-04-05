@@ -570,6 +570,7 @@ body main .grid-area .about-us .about-wrapper .about-block .learn-more {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 20px;
 }
 
 body main .grid-area .about-us .about-wrapper .about-block .learn-more a {
